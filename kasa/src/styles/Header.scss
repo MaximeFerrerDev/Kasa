@@ -1,0 +1,25 @@
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 45px;
+}
+
+// .header__logo {
+//     height:68px;
+// } -> useless cause it's the default size in the svg
+
+.header__nav-container {
+    display: flex;
+    gap: 57px;
+    .header__nav-container__link {
+        color: #000000;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration-line: none;
+    }
+}
+
