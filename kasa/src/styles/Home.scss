@@ -1,0 +1,15 @@
+.accomodation-cards-container {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    border-radius: 25px;
+    padding : 50px;
+    background: #F6F6F6;
+    // display:flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    // gap: 60px;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 60px;
+}

@@ -1,0 +1,26 @@
+.accomodation-card {
+    display:flex;
+    justify-content: self-start;
+    align-items: self-end;
+    // width:340px; // for display flex
+    flex: 1;
+    height: 340px;
+    border-radius: 10px;
+    background-color:  #FF6060;
+    background-image:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.00) 0%,
+            rgba(10, 10, 10, 0.00) 42%, 
+            rgba(4, 4, 4, 0.20) 99.99%, 
+            rgba(0, 0, 0, 0.50) 100%);
+}
+
+.accomodation-card__title {
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
