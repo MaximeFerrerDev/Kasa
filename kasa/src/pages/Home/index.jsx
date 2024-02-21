@@ -1,4 +1,4 @@
-import AccomodationCard from '../../components/Accomodation Card'
+import AccomodationCard from '../../components/AccomodationCard'
 import '../../styles/Home.scss'
 
 // Need to find a solution to get a pretty display on all desktop sizes
@@ -6,8 +6,8 @@ import '../../styles/Home.scss'
 function Home() {
   return (
     <>
-      <div className="hero">
-        <h1 className="hero__title">Chez vous, partout et ailleurs</h1>
+      <div className="home-hero">
+        <h1 className="home-hero__title">Chez vous, partout et ailleurs</h1>
       </div>
       <div className="accomodation-cards-container">
         <AccomodationCard />

@@ -1,8 +1,9 @@
+import '../../styles/About.scss'
+
 function About() {
   return (
     <>
-      <h1>About Kasa</h1>
-      <p>Not much yet 🤷‍♂️</p>
+      <div className="about-hero"></div>
     </>
   )
 }
