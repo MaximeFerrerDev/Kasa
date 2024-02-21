@@ -14,13 +14,13 @@
             rgba(10, 10, 10, 0.00) 42%, 
             rgba(4, 4, 4, 0.20) 99.99%, 
             rgba(0, 0, 0, 0.50) 100%);
-}
-
-.accomodation-card__title {
-    color: #FFFFFF;
-    font-family: Montserrat;
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    margin-left: 20px;
+            
+    &__title {
+        color: #FFFFFF;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
 }

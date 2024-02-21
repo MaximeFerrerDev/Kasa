@@ -1,4 +1,4 @@
-footer {
+.footer {
     height: 209px;
     background-color: #000000;
     display: flex;
@@ -6,15 +6,15 @@ footer {
     justify-content: flex-end;
     align-items: center;
     gap: 29px; 
-}
 
-.footer__copyright {
-    color: #FFF;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    margin-bottom: 29px;
-    margin-top: 0px;
+    &__copyright {
+        color: #FFF;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        margin-bottom: 29px;
+        margin-top: 0px;
+    }
 }
