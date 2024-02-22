@@ -1,4 +1,5 @@
 import '../../styles/AccomodationCard.scss'
+import '../../styles/CSSReset.scss'
 
 function AccomodationCard() {
   return (

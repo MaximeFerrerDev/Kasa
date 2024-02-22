@@ -1,5 +1,6 @@
 import AccomodationCard from '../../components/AccomodationCard'
 import '../../styles/Home.scss'
+import '../../styles/CSSReset.scss'
 
 // Need to find a solution to get a pretty display on all desktop sizes
 

@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom'
+import '../../styles/CSSReset.scss'
 
 function Accomodation() {
   const { accomodationNumber } = useParams()

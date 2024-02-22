@@ -7,6 +7,7 @@
     border-radius: 5px;
     background-color:#FF6060;
     padding: 10px 20px 10px 15px; 
+    border: none;
 
     &__heading {
         color:#FFFFFF;
@@ -16,3 +17,10 @@
     }
 }
 
+.collapse-content {
+    display:none;
+    transform: translateY(-30px);
+    width:1023px;
+    padding: 20px;
+    background-color:#F6F6F673;
+}
