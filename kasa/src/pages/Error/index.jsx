@@ -1,6 +1,5 @@
 import '../../styles/Error.scss'
 import { Link } from 'react-router-dom'
-import '../../styles/CSSReset.scss'
 
 function Error() {
   return (

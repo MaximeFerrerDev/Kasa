@@ -1,6 +1,5 @@
 import WhiteLogo from '../../assets/whitelogo.svg'
 import '../../styles/Footer.scss'
-import '../../styles/CSSReset.scss'
 
 function Footer() {
   return (

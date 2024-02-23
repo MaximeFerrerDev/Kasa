@@ -1,6 +1,5 @@
 import CollapseBar from '../../components/CollapseBar'
 import '../../styles/About.scss'
-import '../../styles/CSSReset.scss'
 
 function About() {
   return (

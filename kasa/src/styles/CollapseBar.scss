@@ -5,13 +5,13 @@
     align-items: center;
     justify-content: space-between;
     border-radius: 5px;
-    background-color:#FF6060;
-    padding: 10px 20px 10px 15px; 
+    background-color: #ff6060;
+    padding: 10px 20px 10px 15px;
     border: none;
     cursor: pointer;
 
     &__heading {
-        color:#FFFFFF;
+        color: #ffffff;
         font-family: Montserrat;
         font-size: 24px;
         font-weight: 700;
@@ -26,16 +26,16 @@
     }
 
     &:active + .collapse-content {
-        max-height:150px; // Trouver un calcul
+        max-height: 150px; // Trouver un calcul
     }
 }
 
 .collapse-content {
-    width:1023px;
-    max-height:0px;
+    width: 1023px;
+    max-height: 0px;
     transition: max-height 0.2s ease-out;
     overflow: hidden;
-    background-color:#F6F6F673;
+    background-color: #f6f6f673;
 
     &__text {
         padding: 20px;

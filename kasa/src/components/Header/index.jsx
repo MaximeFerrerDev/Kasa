@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import OrangeLogo from '../../assets/orangelogo.svg'
 import '../../styles/Header.scss'
-import '../../styles/CSSReset.scss'
 
 function Header() {
   return (
