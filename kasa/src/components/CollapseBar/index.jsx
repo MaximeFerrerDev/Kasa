@@ -4,7 +4,7 @@ import '../../styles/CSSReset.scss'
 
 function CollapseBar() {
   return (
-    <>
+    <div>
       <button className="collapse-bar">
         <p className="collapse-bar__heading">Heading</p>
         <img
@@ -14,11 +14,13 @@ function CollapseBar() {
         />
       </button>
       <div className="collapse-content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
-        Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
-        sed, dolor. Cras elementum ultrices diam.
+        <p className="collapse-content__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+          risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec,
+          ultricies sed, dolor. Cras elementum ultrices diam.
+        </p>
       </div>
-    </>
+    </div>
   )
 }
 

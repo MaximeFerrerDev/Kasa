@@ -8,6 +8,7 @@
     background-color:#FF6060;
     padding: 10px 20px 10px 15px; 
     border: none;
+    cursor: pointer;
 
     &__heading {
         color:#FFFFFF;
@@ -15,12 +16,28 @@
         font-size: 24px;
         font-weight: 700;
     }
+
+    &__icon {
+        transition: transform 0.2s ease-out;
+    }
+
+    &:active > .collapse-bar__icon {
+        transform: rotate(180deg);
+    }
+
+    &:active + .collapse-content {
+        max-height:150px; // Trouver un calcul
+    }
 }
 
 .collapse-content {
-    display:none;
-    transform: translateY(-30px);
     width:1023px;
-    padding: 20px;
+    max-height:0px;
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
     background-color:#F6F6F673;
+
+    &__text {
+        padding: 20px;
+    }
 }
