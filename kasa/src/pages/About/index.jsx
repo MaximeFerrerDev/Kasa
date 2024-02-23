@@ -1,5 +1,5 @@
 import CollapseBar from '../../components/CollapseBar'
-import '../../styles/About.scss'
+import '../../styles/pages/About.scss'
 
 function About() {
   return (

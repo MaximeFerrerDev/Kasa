@@ -1,5 +1,5 @@
 import CollapseIcon from '../../assets/collapseicon.svg'
-import '../../styles/CollapseBar.scss'
+import '../../styles/components/CollapseBar.scss'
 
 function CollapseBar() {
   return (

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import OrangeLogo from '../../assets/orangelogo.svg'
-import '../../styles/Header.scss'
+import '../../styles/components/Header.scss'
 
 function Header() {
   return (

@@ -1,4 +1,4 @@
-import '../../styles/AccomodationCard.scss'
+import '../../styles/components/AccomodationCard.scss'
 
 function AccomodationCard() {
   return (

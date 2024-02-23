@@ -1,5 +1,5 @@
 import AccomodationCard from '../../components/AccomodationCard'
-import '../../styles/Home.scss'
+import '../../styles/pages/Home.scss'
 
 // Need to find a solution to get a pretty display on all desktop sizes
 
