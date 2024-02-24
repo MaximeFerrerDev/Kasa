@@ -20,14 +20,10 @@
     &__icon {
         transition: transform 0.2s ease-out;
     }
+}
 
-    &:active > .collapse-bar__icon {
-        transform: rotate(180deg);
-    }
-
-    &:active + .collapse-content {
-        max-height: 150px; // Trouver un calcul
-    }
+.active + .collapse-bar__icon {
+    transform: rotate(180deg);
 }
 
 .collapse-content {
@@ -38,6 +34,10 @@
     background-color: #f6f6f673;
 
     &__text {
-        padding: 20px;
+        padding: 0px 20px;
+        color: #000;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 400;
     }
 }
