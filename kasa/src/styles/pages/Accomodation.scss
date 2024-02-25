@@ -1,0 +1,73 @@
+.accomodation-infos-container {
+    position: relative;
+    width: 1240px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.accomodation-primary {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        color: #ff6060;
+        font-family: Montserrat;
+        font-size: 36px;
+        font-weight: 500;
+        margin: 0;
+        line-height: 51px;
+    }
+
+    &__location {
+        color: #000;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 20px;
+        line-height: 26px;
+    }
+
+    &__tags-container {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__tags-container > * {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 115px;
+        height: 25px;
+        border-radius: 10px;
+        background: #ff6060;
+        color: #fff;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 700;
+    }
+}
+
+.accomodation-secondary {
+    position: absolute;
+    top: 0;
+    right: 0;
+    &__host {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        &__name {
+            display: grid;
+            align-items: center;
+            color: #ff6060;
+            text-align: right;
+            font-family: Montserrat;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 26px;
+            inline-size: 100px;
+        }
+    }
+}
