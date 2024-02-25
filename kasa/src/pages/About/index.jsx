@@ -11,10 +11,12 @@ function About() {
   return (
     <main className="about-main">
       <div className="about-hero"></div>
-      <CollapseBar heading="Fiabilité" textContent={shortText} />
-      <CollapseBar heading="Respect" textContent={longText} />
-      <CollapseBar heading="Service" textContent={shortText} />
-      <CollapseBar heading="Sécurité" textContent={longText} />
+      <div className="about-collapse-bar-container">
+        <CollapseBar heading="Fiabilité" textContent={shortText} />
+        <CollapseBar heading="Respect" textContent={longText} />
+        <CollapseBar heading="Service" textContent={shortText} />
+        <CollapseBar heading="Sécurité" textContent={longText} />
+      </div>
     </main>
   )
 }

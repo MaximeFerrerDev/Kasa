@@ -10,7 +10,7 @@ function CollapseBar(props) {
 
   const handleClick = (event) => {
     // Setting the max-height manually from the scroll height to fit every text
-    let content = event.target.nextElementSibling
+    let content = event.currentTarget.nextElementSibling
     if (content.style.maxHeight) {
       content.style.maxHeight = null
     } else {
