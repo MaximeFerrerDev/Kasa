@@ -23,7 +23,7 @@ function CollapseBar(props) {
   return (
     <div>
       <button
-        className={`collapse-bar ${isActive ? 'active' : ''}`}
+        className={`collapse-bar ${isActive ? 'active-bar' : ''}`}
         onClick={(event) => handleClick(event)}
       >
         <p className="collapse-bar__heading">{heading}</p>

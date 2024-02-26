@@ -13,11 +13,11 @@ function Accomodation() {
 
   return (
     <main className="accomodation-main">
-      <Slideshow />
+      <Slideshow id="c67ab8a7" />
       <div className="accomodation-infos-container">
         <div className="accomodation-primary">
           <p className="accomodation-primary__title">
-            Cozy loft on the Canal Saint-Martin
+            Cozy loft on the Canal Saint-Martin n°{accomodationNumber}
           </p>
           <p className="accomodation-primary__location">Paris, Ile-de-France</p>
           <div className="accomodation-primary__tags-container">

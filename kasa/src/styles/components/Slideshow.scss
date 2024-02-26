@@ -5,12 +5,14 @@
     margin: auto;
 
     &__prev-button {
+        cursor: pointer;
         position: absolute;
         top: 170px;
         left: 25px;
     }
 
     &__next-button {
+        cursor: pointer;
         position: absolute;
         top: 170px;
         right: 25px;
@@ -19,9 +21,9 @@
 
 .slide {
     position: relative;
-    display: block;
     height: 100%;
     width: 100%;
+    display: none;
 
     &__picture {
         border-radius: 25px;
@@ -40,5 +42,9 @@
         font-style: normal;
         font-weight: 500;
         color: #ffffff;
+    }
+
+    &.active-slide {
+        display: block;
     }
 }
