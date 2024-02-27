@@ -1,7 +1,6 @@
 import AccomodationCard from '../../components/AccomodationCard'
 import '../../styles/pages/Home.scss'
-
-// Need to find a solution to get a pretty display on all desktop sizes
+import AccomodationData from '../../datas/accomodations.json'
 
 function Home() {
   return (
@@ -10,12 +9,9 @@ function Home() {
         <h1 className="home-hero__title">Chez vous, partout et ailleurs</h1>
       </div>
       <div className="accomodation-cards-container">
-        <AccomodationCard />
-        <AccomodationCard />
-        <AccomodationCard />
-        <AccomodationCard />
-        <AccomodationCard />
-        <AccomodationCard />
+        {AccomodationData.map((accomodation) => (
+          <AccomodationCard id={accomodation.id} key={accomodation.id} />
+        ))}
       </div>
     </>
   )

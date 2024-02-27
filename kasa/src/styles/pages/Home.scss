@@ -37,6 +37,11 @@
     // justify-content: center;
     // gap: 60px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 60px;
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 5%;
+    grid-row-gap: 30px;
+    & > a {
+        text-decoration: none;
+        width: 100%;
+    }
 }
