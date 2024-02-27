@@ -4,7 +4,7 @@ import '../../styles/components/Header.scss'
 
 function Header() {
   return (
-    <header>
+    <header className="header">
       <img className="header__logo" src={OrangeLogo} alt="Kasa logo" />
       <nav className="header__nav-container">
         <Link className="header__nav-container__link" to="/">

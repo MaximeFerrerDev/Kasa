@@ -4,7 +4,7 @@ import AccomodationData from '../../datas/accomodations.json'
 
 function Home() {
   return (
-    <>
+    <main>
       <div className="home-hero">
         <h1 className="home-hero__title">Chez vous, partout et ailleurs</h1>
       </div>
@@ -13,7 +13,7 @@ function Home() {
           <AccomodationCard id={accomodation.id} key={accomodation.id} />
         ))}
       </div>
-    </>
+    </main>
   )
 }
 
