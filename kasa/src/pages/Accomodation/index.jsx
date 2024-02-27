@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import Slideshow from '../../components/Slideshow'
 import '../../styles/pages/Accomodation.scss'
 import GreyRatingStar from '../../assets/greyratingstar.svg'
@@ -6,6 +6,7 @@ import OrangeRatingStar from '../../assets/orangeratingstar.svg'
 import DefaultHostPicture from '../../assets/defaulthostpicture.svg'
 import CollapseBar from '../../components/CollapseBar'
 import AccomodationData from '../../datas/accomodations.json'
+import { useEffect } from 'react'
 
 function Accomodation() {
   //Getting id from params and finding the corresponding data
@@ -14,73 +15,96 @@ function Accomodation() {
     (accomodation) => accomodation.id === id
   )
 
-  return (
-    <main className="accomodation-main">
-      <Slideshow id={id} />
-      <div className="accomodation-infos-container">
-        <div className="accomodation-primary">
-          <p className="accomodation-primary__title">{accomodation.title}</p>
-          <p className="accomodation-primary__location">
-            {accomodation.location}
-          </p>
-          <div className="accomodation-primary__tags-container">
-            {accomodation.tags.map((value, index) => (
-              <div key={`${value}-tag-${index}`}>{value}</div>
-            ))}
-          </div>
-        </div>
-        <div className="accomodation-secondary">
-          <div className="accomodation-secondary__host">
-            <div className="accomodation-secondary__host__name">
-              {accomodation.host.name}
+  // Redirecting to 404 if id is wrong
+  const navigate = useNavigate()
+  useEffect(() => {
+    if (!accomodation) {
+      navigate('/error')
+    }
+  }, [accomodation, navigate])
+
+  // If not displaying the accomodation page
+  if (accomodation) {
+    return (
+      <main className="accomodation-main">
+        <Slideshow id={id} />
+        <div className="accomodation-infos-container">
+          <div className="accomodation-primary">
+            <p className="accomodation-primary__title">{accomodation.title}</p>
+            <p className="accomodation-primary__location">
+              {accomodation.location}
+            </p>
+            <div className="accomodation-primary__tags-container">
+              {accomodation.tags.map((value, index) => (
+                <div key={`${value}-tag-${index}`}>{value}</div>
+              ))}
             </div>
-            <img
-              className="accomodation-secondary__host__picture"
-              src={
-                accomodation.host.picture
-                  ? accomodation.host.picture
-                  : DefaultHostPicture
-              }
-              alt="host"
-            />
           </div>
-          <div className="accomodation-secondary__rating">
-            <img
-              src={accomodation.rating <= 0 ? GreyRatingStar : OrangeRatingStar}
-              alt="rating star"
+          <div className="accomodation-secondary">
+            <div className="accomodation-secondary__host">
+              <div className="accomodation-secondary__host__name">
+                {accomodation.host.name}
+              </div>
+              <img
+                className="accomodation-secondary__host__picture"
+                src={
+                  accomodation.host.picture
+                    ? accomodation.host.picture
+                    : DefaultHostPicture
+                }
+                alt="host"
+              />
+            </div>
+            <div className="accomodation-secondary__rating">
+              <img
+                src={
+                  accomodation.rating <= 0 ? GreyRatingStar : OrangeRatingStar
+                }
+                alt="rating star"
+              />
+              <img
+                src={
+                  accomodation.rating <= 1 ? GreyRatingStar : OrangeRatingStar
+                }
+                alt="rating star"
+              />
+              <img
+                src={
+                  accomodation.rating <= 2 ? GreyRatingStar : OrangeRatingStar
+                }
+                alt="rating star"
+              />
+              <img
+                src={
+                  accomodation.rating <= 3 ? GreyRatingStar : OrangeRatingStar
+                }
+                alt="rating star"
+              />
+              <img
+                src={
+                  accomodation.rating <= 4 ? GreyRatingStar : OrangeRatingStar
+                }
+                alt="rating star"
+              />
+            </div>
+          </div>
+          <div className="accomodation-collapse-bar-container">
+            <CollapseBar
+              heading="Description"
+              textContent={accomodation.description}
             />
-            <img
-              src={accomodation.rating <= 1 ? GreyRatingStar : OrangeRatingStar}
-              alt="rating star"
-            />
-            <img
-              src={accomodation.rating <= 2 ? GreyRatingStar : OrangeRatingStar}
-              alt="rating star"
-            />
-            <img
-              src={accomodation.rating <= 3 ? GreyRatingStar : OrangeRatingStar}
-              alt="rating star"
-            />
-            <img
-              src={accomodation.rating <= 4 ? GreyRatingStar : OrangeRatingStar}
-              alt="rating star"
+            <CollapseBar
+              heading="Equipements"
+              textContent={accomodation.equipments.join(`
+              `)}
             />
           </div>
         </div>
-        <div className="accomodation-collapse-bar-container">
-          <CollapseBar
-            heading="Description"
-            textContent={accomodation.description}
-          />
-          <CollapseBar
-            heading="Equipements"
-            textContent={accomodation.equipments.join(`
-            `)}
-          />
-        </div>
-      </div>
-    </main>
-  )
+      </main>
+    )
+  } else {
+    return
+  }
 }
 
 export default Accomodation
