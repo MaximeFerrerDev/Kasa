@@ -42,25 +42,33 @@ function Slideshow(props) {
           key={`${id}-${index}`}
         >
           <img className="slide__picture" src={value} alt={`accomodation`} />
-          <p className="slide__number">{`${index + 1}/${
-            accomodation.pictures.length
-          }`}</p>
+          <p className="slide__number">
+            {accomodation.pictures.length > 1
+              ? `${index + 1}/${accomodation.pictures.length}`
+              : ''}
+          </p>
         </div>
       ))}
 
       {/* Fixed part for navigation */}
-      <img
-        className="slideshow-container__prev-button"
-        src={PrevButton}
-        alt="previous"
-        onClick={() => prevSlide()}
-      />
-      <img
-        className="slideshow-container__next-button"
-        src={NextButton}
-        alt="next"
-        onClick={() => nextSlide()}
-      />
+      {accomodation.pictures.length > 1 ? (
+        <>
+          <img
+            className="slideshow-container__prev-button"
+            src={PrevButton}
+            alt="previous"
+            onClick={() => prevSlide()}
+          />
+          <img
+            className="slideshow-container__next-button"
+            src={NextButton}
+            alt="next"
+            onClick={() => nextSlide()}
+          />
+        </>
+      ) : (
+        ''
+      )}
     </div>
   )
 }
