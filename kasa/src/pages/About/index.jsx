@@ -1,5 +1,6 @@
 import CollapseBar from '../../components/CollapseBar'
 import '../../styles/pages/About.scss'
+import Hero from '../../components/Hero'
 
 function About() {
   const shortText =
@@ -10,7 +11,7 @@ function About() {
 
   return (
     <main className="about-main">
-      <div className="about-hero"></div>
+      <Hero title="" background="about" />
       <div className="about-collapse-bar-container">
         <CollapseBar heading="Fiabilité" textContent={shortText} />
         <CollapseBar heading="Respect" textContent={longText} />

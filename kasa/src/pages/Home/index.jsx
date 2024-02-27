@@ -1,13 +1,12 @@
 import AccomodationCard from '../../components/AccomodationCard'
 import '../../styles/pages/Home.scss'
 import AccomodationData from '../../datas/accomodations.json'
+import Hero from '../../components/Hero'
 
 function Home() {
   return (
     <main>
-      <div className="home-hero">
-        <h1 className="home-hero__title">Chez vous, partout et ailleurs</h1>
-      </div>
+      <Hero title="Chez vous, partout et ailleurs" background="home" />
       <div className="accomodation-cards-container">
         {AccomodationData.map((accomodation) => (
           <AccomodationCard id={accomodation.id} key={accomodation.id} />
