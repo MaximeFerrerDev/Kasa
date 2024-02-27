@@ -43,7 +43,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 115px;
+        width: fit-content;
+        padding-left: 5px;
+        padding-right: 5px;
         height: 25px;
         border-radius: 10px;
         background: #ff6060;
@@ -73,6 +75,11 @@
             font-weight: 500;
             line-height: 26px;
             inline-size: 100px;
+        }
+        &__picture {
+            height: 64px;
+            width: 64px;
+            border-radius: 50%;
         }
     }
 }

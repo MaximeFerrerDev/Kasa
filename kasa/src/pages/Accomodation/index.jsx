@@ -5,49 +5,78 @@ import GreyRatingStar from '../../assets/greyratingstar.svg'
 import OrangeRatingStar from '../../assets/orangeratingstar.svg'
 import DefaultHostPicture from '../../assets/defaulthostpicture.svg'
 import CollapseBar from '../../components/CollapseBar'
+import AccomodationData from '../../datas/accomodations.json'
 
 function Accomodation() {
-  const { accomodationNumber } = useParams()
-  const shortText =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.'
+  //Getting id from params and finding the corresponding data
+  const { id } = useParams()
+  const accomodation = AccomodationData.find(
+    (accomodation) => accomodation.id === id
+  )
 
   return (
     <main className="accomodation-main">
-      <Slideshow id="c67ab8a7" />
+      <Slideshow id={id} />
       <div className="accomodation-infos-container">
         <div className="accomodation-primary">
-          <p className="accomodation-primary__title">
-            Cozy loft on the Canal Saint-Martin n°{accomodationNumber}
+          <p className="accomodation-primary__title">{accomodation.title}</p>
+          <p className="accomodation-primary__location">
+            {accomodation.location}
           </p>
-          <p className="accomodation-primary__location">Paris, Ile-de-France</p>
           <div className="accomodation-primary__tags-container">
-            <div>Cozy</div>
-            <div>Canal</div>
-            <div>Paris 10</div>
+            {accomodation.tags.map((value, index) => (
+              <div key={`${value}-tag-${index}`}>{value}</div>
+            ))}
           </div>
         </div>
         <div className="accomodation-secondary">
           <div className="accomodation-secondary__host">
             <div className="accomodation-secondary__host__name">
-              Alexandre Dumas
+              {accomodation.host.name}
             </div>
             <img
               className="accomodation-secondary__host__picture"
-              src={DefaultHostPicture}
-              alt="default host"
+              src={
+                accomodation.host.picture
+                  ? accomodation.host.picture
+                  : DefaultHostPicture
+              }
+              alt="host"
             />
           </div>
           <div className="accomodation-secondary__rating">
-            <img src={OrangeRatingStar} alt="rating star" />
-            <img src={OrangeRatingStar} alt="rating star" />
-            <img src={OrangeRatingStar} alt="rating star" />
-            <img src={GreyRatingStar} alt="rating star" />
-            <img src={GreyRatingStar} alt="rating star" />
+            <img
+              src={accomodation.rating <= 0 ? GreyRatingStar : OrangeRatingStar}
+              alt="rating star"
+            />
+            <img
+              src={accomodation.rating <= 1 ? GreyRatingStar : OrangeRatingStar}
+              alt="rating star"
+            />
+            <img
+              src={accomodation.rating <= 2 ? GreyRatingStar : OrangeRatingStar}
+              alt="rating star"
+            />
+            <img
+              src={accomodation.rating <= 3 ? GreyRatingStar : OrangeRatingStar}
+              alt="rating star"
+            />
+            <img
+              src={accomodation.rating <= 4 ? GreyRatingStar : OrangeRatingStar}
+              alt="rating star"
+            />
           </div>
         </div>
         <div className="accomodation-collapse-bar-container">
-          <CollapseBar heading="Description" textContent={shortText} />
-          <CollapseBar heading="Equipements" textContent={shortText} />
+          <CollapseBar
+            heading="Description"
+            textContent={accomodation.description}
+          />
+          <CollapseBar
+            heading="Equipements"
+            textContent={accomodation.equipments.join(`
+            `)}
+          />
         </div>
       </div>
     </main>
