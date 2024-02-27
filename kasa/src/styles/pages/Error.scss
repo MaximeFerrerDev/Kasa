@@ -1,22 +1,22 @@
 .error {
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     height: calc(100vh - 322px); // so that it doenst send the footer up or down
 
     &__title {
-        color: #FF6060;
+        color: #ff6060;
         text-align: center;
         font-family: Montserrat;
         font-size: 288px;
-        font-weight:700;
+        font-weight: 700;
         margin-top: 0px;
         margin-bottom: 0px;
     }
 
     &__description {
-        color: #FF6060;
+        color: #ff6060;
         font-family: Montserrat;
         font-size: 36px;
         font-weight: 500;
@@ -32,5 +32,23 @@
         font-size: 18px;
         font-weight: 500;
         text-decoration-line: underline;
+    }
+}
+
+@media (max-width: 767px) {
+    .error {
+        height: calc(100vh - 282px);
+        &__title {
+            font-size: 96px;
+            margin-top: 50px;
+        }
+        &__description {
+            width: 260px;
+            font-size: 18px;
+            line-height: 140%;
+        }
+        &__linkback {
+            font-size: 14px;
+        }
     }
 }
