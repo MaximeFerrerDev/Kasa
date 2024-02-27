@@ -5,7 +5,7 @@
 
 .accomodation-infos-container {
     position: relative;
-    width: 1240px;
+    max-width: calc(100vw - 200px);
     margin: auto;
     margin-top: 30px;
     margin-bottom: 25px;
@@ -44,8 +44,8 @@
         align-items: center;
         justify-content: center;
         width: fit-content;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 30px;
+        padding-right: 30px;
         height: 25px;
         border-radius: 10px;
         background: #ff6060;
@@ -89,4 +89,79 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     column-gap: 75px;
+}
+
+@media (max-width: 767px) {
+    .accomodation-main {
+        padding-top: 30px;
+        padding-bottom: 0px;
+    }
+
+    .accomodation-infos-container {
+        max-width: calc(100vw - 40px);
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+
+    .accomodation-primary {
+        margin-bottom: 20px;
+        &__title {
+            font-size: 18px;
+            line-height: 25px;
+        }
+        &__location {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+        &__tags-container {
+            flex-wrap: wrap;
+        }
+        &__tags-container > * {
+            border-radius: 5px;
+            height: 18px;
+            font-size: 10px;
+            // font-weight: 500;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    .accomodation-secondary {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        top: none;
+        right: none;
+        &__rating {
+            order: 1;
+        }
+        &__rating > * {
+            height: 18px;
+            width: 18px;
+        }
+        &__host {
+            order: 2;
+            display: flex;
+            margin-bottom: 0;
+            gap: 10px;
+            &__name {
+                font-size: 12px;
+                line-height: 16px;
+                inline-size: 60px;
+            }
+            &__picture {
+                height: 32px;
+                width: 32px;
+                border-radius: 50%;
+            }
+        }
+    }
+    .accomodation-collapse-bar-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }
