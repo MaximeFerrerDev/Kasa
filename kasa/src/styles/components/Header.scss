@@ -9,8 +9,10 @@
 
 .header__nav-container {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 57px;
-
+    flex-wrap: wrap;
     &__link {
         color: #000000;
         font-family: Montserrat;
