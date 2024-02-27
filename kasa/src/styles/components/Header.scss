@@ -26,6 +26,7 @@
 
 @media (max-width: 767px) {
     .header {
+        margin-top: 20px;
         margin-left: 20px;
         margin-right: 20px;
         &__logo {
@@ -34,12 +35,16 @@
     }
 
     .header__nav-container {
-        margin-left: 25px;
-        gap: 25px;
+        margin-left: 20px;
+        gap: 20px;
 
         &__link {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
             font-size: 12px;
             text-transform: uppercase;
+            text-align: center;
         }
     }
 }

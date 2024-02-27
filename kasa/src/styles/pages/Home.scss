@@ -45,3 +45,29 @@
         width: 100%;
     }
 }
+
+@media (max-width: 767px) {
+    .home-hero {
+        justify-content: flex-start;
+        height: 111px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        &__title {
+            font-size: 24px;
+            margin-left: 20px;
+            margin-right: 20px;
+            max-width: 225px;
+        }
+    }
+    .accomodation-cards-container {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 25px;
+        padding: 0;
+        background: none;
+        grid-template-columns: 100%;
+        grid-row-gap: 20px;
+    }
+}
