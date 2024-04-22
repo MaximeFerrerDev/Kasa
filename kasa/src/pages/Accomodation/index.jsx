@@ -19,7 +19,7 @@ function Accomodation() {
   const navigate = useNavigate()
   useEffect(() => {
     if (!accomodation) {
-      navigate('/error')
+      navigate('/kasa/error')
     }
   }, [accomodation, navigate])
 

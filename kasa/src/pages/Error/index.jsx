@@ -8,7 +8,7 @@ function Error() {
       <p className="error__description">
         Oups! La page que vous demandez n'existe pas
       </p>
-      <Link to="/" className="error__linkback">
+      <Link to="/kasa/" className="error__linkback">
         Retourner sur la page d'accueil
       </Link>
     </div>
