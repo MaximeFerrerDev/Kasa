@@ -9,7 +9,7 @@ function AccomodationCard(props) {
   )
 
   return (
-    <Link to={`/accomodation/${id}`} key={id}>
+    <Link to={`/kasa/accomodation/${id}`} key={id}>
       <div className="accomodation-card">
         <img
           className="accomodation-card__picture"
